@@ -1,6 +1,6 @@
 # Emotion-Analyzer
 
-# Automated Rating System using SER (Speech Emotion Recognition)
+# SER (Speech Emotion Recognition)
 
 Dedicated customer service agents continually goes above and beyond to help clients, making an effort to solve concerns. Top-level management finds a critical need for a sophisticated tool to assess the performance of these agents as part of their effort to improve the quality of service delivery. The traditional method of performance evaluation entails the laborious task of manually examining recorded calls, a tedious task that presents major difficulties.
 
