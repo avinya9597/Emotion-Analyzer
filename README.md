@@ -1,4 +1,4 @@
-# Emotion-Analyzer
+# Emolyzer
 
 # SER (Speech Emotion Recognition)
 
