@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Feature Extraction</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body style="padding: 10px;">
+
+ <!-- ======= Header ======= -->
+ <header id="header" style="background-color: rgba(42, 44, 57, 0.9);" class="fixed-top d-flex align-items-center  header-transparent ">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <div class="logo">
+      <h1><a href="index.html"><img src="./assets/img/favicon.png"/></a></h1>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+
+        <li><a class="nav-link scrollto" href="./index.html">Home</a></li>
+        <li><a class="nav-link scrollto" href="./EDA.html">EDA</a></li>
+        <li class="dropdown active"><a href="#"><span>Analysis</span> <i class="bi bi-chevron-down"></i></a>
+
+          <ul>
+            <li><a href="./FeaEx.html">Feature Extraction</a></li>
+            <li><a href="./Model_Analysis.html">Model Analysis</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link scrollto " href="./Conclusion.html">Conclusion</a></li>
+       
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
+
+
+    <!-- ======= Our Services Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container" style="max-width: 1520px;">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Model Analysis</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Model Analysis</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+   <br/>
+
+<div class="tabset" style="width: 100%;">
+  <!-- Tab 1 -->
+  <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+  <label for="tab1">Introduction</label>
+  <!-- Tab 2 -->
+  <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+  <label for="tab2">ANN</label>
+  <!-- Tab 3 -->
+  <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
+  <label for="tab3">CNN</label>
+  <!-- Tab 4 -->
+  <input type="radio" name="tabset" id="tab4" aria-controls="dunkle">
+  <label for="tab4">LSTM RNN</label>
+   <!-- Tab 5 -->
+   <input type="radio" name="tabset" id="tab5" aria-controls="dunkl">
+   <label for="tab5">Results</label>
+ 
+  
+  <div class="tab-panels" style="text-align: justify;">
+    <section id="marzen" class="tab-panel">
+      <div class="row content" data-aos="fade-up">
+        <div class="col-lg-6" style="text-align: justify;">
+            <p>
+           
+              
+            Approach shows ANN, CNN and LSTM model respectively for speech emotion analysis using three distinct 
+            emotional labels: anger, sadness, and happiness. The approach involves the extraction of audio features, 
+            specifically Mel-frequency cepstral coefficients (MFCC), Pitch Chroma Patterns (PCP), and 
+            Linear Prediction Coefficients (LPC), to capture relevant information from the raw audio signals.
+            
+            The proposed methodology employs a threefold strategy, wherein separate models are trained for each emotion category. 
+            This tailored approach aims to enhance the model's sensitivity to the subtle nuances and distinctive patterns associated with anger, 
+            sadness, and happiness. The audio datasets used for training and evaluation consist of a diverse set of samples encompassing various 
+            speakers, contexts, and emotional intensities.
+            <br/><br/>
+      
+            The feature extraction process involves transforming the raw audio signals into representative feature vectors, 
+            which are then used as input to the Neural network architecture. The network is designed to learn and discriminate between 
+            the unique acoustic patterns characteristic of each emotion class. Training is performed using supervised learning 
+            techniques, with labeled emotion data guiding the network towards accurate classification.
+  
+            </p>
+            
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0"  style="text-align: justify;">
+          <p>
+          <img src="../Selecao/assets/img/portfolio/inro.jpg" style="height: 400px;width: 100%;"/>
+          </p>
+         
+        </div>
+  
+        </div>
+  
+  </section>
+    <section id="rauchbier" class="tab-panel">
+      <h4>Comparative Analysis (Confusion Matrix and Accuracy)</h4>
+      <p>
+        <h4>Confusion Matrix</h4>
+      <img src="./assets/img/Model/ANN/ann_cm.png" style="width: 90%;"/>
+      
+      <hr/>
+    
+
+       <h4>Accuracy</h4>
+       <img src="./assets/img/Model/ANN/ann_mfcc.png" style="width: 90%;"/>
+      <br/>
+      <img src="./assets/img/Model/ANN/pcp_ann.png" style="width: 90%;"/>
+      <br/>
+      <img src="./assets/img/Model/ANN/lcp_ann.png" style="width: 90%;"/>
+
+      </p>
+
+
+      </section>
+    <section id="dunkles" class="tab-panel">
+      <h4>Comparative Analysis (Confusion Matrix and Accuracy)</h4>
+      <p>
+        <h4>Confusion Matrix</h4>
+      <img src="./assets/img/Model/CNN/cnn_cm.png" style="width: 90%;"/>
+      
+      <hr/>
+    
+
+       <h4>Accuracy</h4>
+       <img src="./assets/img/Model/CNN/cnn_mcff.png" style="width: 90%;"/>
+      <br/>
+      <img src="./assets/img/Model/CNN/cnn_pcp.png" style="width: 90%;"/>
+      <br/>
+      <img src="./assets/img/Model/CNN/cnn_lcp.png" style="width: 90%;"/>
+
+      </p>
+    </section>
+
+    <section id="dunkle" class="tab-panel">
+      <h4>Comparative Analysis (Confusion Matrix and Accuracy)</h4>
+      <p>
+        <h4>Confusion Matrix</h4>
+      <img src="./assets/img/Model/lstm/lstm_cm.png" style="width: 90%;"/>
+      
+      <hr/>
+    
+
+       <h4>Accuracy</h4>
+       <img src="./assets/img/Model/lstm/mfcc_lstm.png" style="width: 90%;"/>
+      <br/>
+      <img src="./assets/img/Model/lstm/pcp_lstm.png" style="width: 90%;"/>
+      <br/>
+      <img src="./assets/img/Model/lstm/lcp_lstm.png" style="width: 90%;"/>
+
+      </p>
+    </section>
+
+
+    <section id="dunkl" class="tab-panel">
+      <div class="row content" data-aos="fade-up">
+        <div class="col-lg-6" style="text-align: justify;">
+            <p>
+           
+              
+                Based on the results obtained from the different neural network models (ANN, CNN, and LSTM/RNN)
+                using three types of features (MFCC, PCP, and LCP) for speech emotion analysis, we can draw the 
+                following conclusions:
+  
+  
+                All three types of neural network models performed relatively well with MFCC features.
+                MFCC features, which capture spectral and temporal characteristics of audio signals, 
+                seem to be effective for speech emotion analysis across all model architectures.
+  
+                The performance with PCP features varied across models but generally resulted in moderate accuracy.
+                While PCP features showed reasonable performance, they did not consistently outperform 
+                MFCC features, suggesting that they may not be as informative for speech emotion analysis in this context.
+  
+                LCP features consistently yielded lower accuracies across all models.
+                The models struggled to effectively leverage linear predictive coding features, 
+                indicating that these features might not be well-suited for capturing the nuances of speech emotions 
+                in the given dataset.
+  
+            </p>
+            
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0"  style="text-align: justify;">
+          <p>
+            For speech emotion analysis, MFCC features consistently demonstrated the best performance across all three neural network architectures, indicating their effectiveness in capturing relevant patterns for this task.
+            PCP features showed moderate performance, suggesting their potential utility but not reaching the same level of effectiveness as MFCC features.
+            LCP features consistently resulted in lower accuracies, indicating limited suitability for speech emotion analysis in the context of the employed models and dataset.
+            The choice of feature representation is crucial in audio-based tasks, and the success of MFCC features in this study suggests their importance
+             for capturing the discriminative characteristics of speech emotions. Further refinement of feature engineering, model architecture, 
+             and hyperparameter tuning may contribute to improved performance, especially for alternative features such as PCP and LCP.
+  
+            
+          </p>
+        </div>
+  
+        </div>
+  
+    </section>
+
+    
+   
+      </div>
+  
+</div>
+
+
+   
+
+  
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

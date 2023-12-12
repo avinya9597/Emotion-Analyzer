@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Feature Extraction</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body style="padding: 10px;">
+
+  <!-- ======= Header ======= -->
+  <header id="header" style="background-color: rgba(42, 44, 57, 0.9);" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html"><img src="./assets/img/favicon.png"/></a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+
+          <li><a class="nav-link scrollto" href="./index.html">Home</a></li>
+          <li><a class="nav-link scrollto " href="./EDA.html">EDA</a></li>
+          <li class="dropdown active"><a href="#"><span>Analysis</span> <i class="bi bi-chevron-down"></i></a>
+
+            <ul>
+              <li><a href="./FeaEx.html">Feature Extraction</a></li>
+              <li><a href="./Model_Analysis.html">Model Analysis</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto " href="./Conclusion.html">Conclusion</a></li>
+         
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+    <!-- ======= Our Services Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container" style="max-width: 1520px;">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Feature Extraction</h2>
+          <ol>
+            <li><a href="./index.html">Home</a></li>
+            <li>Feature Extraction</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+   <br/>
+
+<div class="tabset" style="width: 100%;">
+  <!-- Tab 1 -->
+  <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+  <label for="tab1">Audio Features</label>
+  <!-- Tab 2 -->
+  <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+  <label for="tab2">MFCCs</label>
+  <!-- Tab 3 -->
+  <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
+  <label for="tab3">PCPs</label>
+  <!-- Tab 4 -->
+  <input type="radio" name="tabset" id="tab4" aria-controls="dunkle">
+  <label for="tab4">LPCs</label>
+ 
+  
+  <div class="tab-panels" style="text-align: justify;">
+    <section id="marzen" class="tab-panel">
+      <h4>Basic Features</h4>
+      <p>
+        Audio features are description of sound or an audio 
+        signal that can basically be fed in AI models to build intelligent audio bots.
+        <br/>
+        <p>
+          Here are some of the basic audio features that can be extracted to perform emotion speech analysis:
+          <ol>
+            <li>Pitch: The perceived highness or lowness of a sound. Features related to pitch help identify high arousal emotions 
+              like anger or joy.
+            </li>
+            <li>Intensity: The loudness of the speech. Louder speech can indicate higher arousal emotions.</li>
+            <li>Speaking rate: The speed at which words are spoken. Faster rates can correspond to excitement or panic.</li>
+            <li>Voice quality: Properties related to the vocal tract shape and laryngeal articulators. 
+              A tense/pressed voice can signal anger or fear.
+            </li>
+            <li>Spectral features: Attributes related to the speech frequencies and bandwidth. Wider bandwidth and more high-frequency 
+              energy may indicate highly energetic emotions.
+            </li>
+            <li>Formants: The resonant frequencies of the vocal tract. Can distinguish between vowels and certain emotions. 
+            </li>
+            <li>Mel-frequency cepstral coefficients (MFCCs): Represent the short-term power spectrum of sound. 
+              Useful for speech/emotion recognition.
+            </li>
+            <li>Chroma vectors: Represent the harmonic content and musical aspect of speech. Related to emotion conveyed through voice melody.
+            </li>
+            <li>Energy/amplitude: Loudness patterns over time. Can indicate emphasis, stress, raises in voice volume.
+            </li>
+          </ol>
+          In summary, pitch, intensity, timbre, tempo/rhythm, and descriptive spectral features provide information to recognize the underlying emotion being communicated through the voice. More advanced features like MFCCs can be used as input to machine learning algorithms.
+
+        </p>
+
+
+      </p>
+  </section>
+    <section id="rauchbier" class="tab-panel">
+      <h4>Mel-Frequency Cepstral Coefficients</h4>
+      Following are the features extracted from audio files:
+      Link to the code: <a href="">Code</a>
+      <p>
+
+      <img src= './assets/img/FeEX/mfcc_df1.png' />
+      <br/>
+      
+       In previous section (EDA), described aboult a spectrogram that shows how the energy of different pitches changes over time in a 
+       sound recording. The x-axis shows time, while the y-axis shows frequency or pitch. 
+       At any point along the x-axis, you can see the levels across the different pitches on the y-axis. 
+       <i>Warmer colors indicate more energy at those pitches and time points.</i>
+      <br/>
+      <br/>
+
+      
+       <div class="img_container">
+        <div class="image">
+          <img src= './assets/img/FeEX/mel.png' />
+
+        </div>
+        <div class="image" style="width: 50%; padding: 30px;"> 
+          <br/>
+          The <b>mel scale</b> is a perceptual scale of pitches that tries to mimic how humans hear sound. 
+          High pitches and low pitches are not linear to our ear's perception. 
+          The mel scale assigns numbers to frequencies in a way that better matches how humans discern pitch differences.
+          <br/>
+          <br/>
+          A <b>mel spectrogram</b> is thus a spectrogram that uses the mel scale on the y-axis rather than raw Hz frequencies. 
+          This gives more resolution to the lower and mid-range pitches which is more akin to human perception. 
+          The time-based patterns and relative energy between pitches conveys characteristic textures of sounds that our ear 
+          recognizes holistically even without conscious frequency analysis.
+        </div> 
+      </div> 
+
+        <p>
+          <h3>What is MFCC</h3>
+          <br/>
+          You know how every person has a unique voice? 
+          Even if two people say the exact same word, you can tell them apart, right? 
+          Well, MFCCs are special features that can capture the uniqueness of voices to tell them apart.
+
+          When you speak, your voice produces sound waves that vibrate at different speeds. These speeds 
+          are called frequencies. Your voice has a special pattern of frequencies that other voices don't
+           have. MFCCs help highlight these special voice patterns like a fingerprint for sound!
+
+          Here's what happens step-by-step:
+
+          <ol>
+            <li>Record a voice saying a word
+             </li>
+            <li> Figure out which frequencies are louder in that recording
+            </li>
+            <li>The loud frequencies create a frequency fingerprint
+             </li>
+            <li> Apply a Mel Filter to this fingerprint. Mel is like hearing frequencies as a human would.
+              </li>
+            <li>Use a Cepstrum analysis to capture unique voice patterns
+           </li>
+          </ol>
+          
+          So in a nutshell, MFCCs are like vocal fingerprints extracted using frequency and Mel scale analysis to identify voices. 
+          They help machines understand different qualities of sound and speech.
+          <br/>
+          Now to explain in technical terms, the information of the rate of change in spectral bands of a signal is given by its cepstrum. 
+           A cepstrum is basically a spectrum of the log of the spectrum of the time signal. 
+           The resulting spectrum is neither in the frequency domain nor in the time domain and hence, 
+           it was named the quefrency (an anagram of the word frequency) domain. 
+           The Mel-Frequency Cepstral Coefficients (MFCCs) are nothing but the coefficients that make up the mel-frequency cepstrum.
+
+          The cepstrum conveys the different values that construct the formants (a characteristic component of the quality of a speech sound) 
+          and timbre of a sound. MFCCs thus are useful for deep learning models.
+
+          <br/>
+          The Band Energy Ratio (BER) provides the relation between the lower and higher frequency bands. 
+          It can be thought of as the measure of how dominant low frequencies are. 
+          This feature has been extensively used in music/speech discrimination.
+        </p>
+    
+        <i>Source: https://devopedia.org/audio-feature-extraction</i>
+
+      </p>
+
+
+      </section>
+    <section id="dunkles" class="tab-panel">
+      <h4>PCP</h4>
+      Following are the features extracted from audio files:
+      Link to the code: <a href="">Code</a>
+      <p>
+        <img src="./assets/img/FeEX/pcp_df.png"
+        In speech emotion analysis, a pitch class profile refers to a way of looking at the pitch (or frequency) of 
+        the sounds in someone's speech and summarizing it in a simplified manner. It helps to understand the emotional content of speech.
+        <o>
+          <li>
+            Pitch: Imagine you're listening to someone talk, and their voice goes up and down. 
+            These ups and downs correspond to the pitch of their voice, or how high or low it sounds.
+          </li>
+          <li>
+            Class Profile: Now, think of the different pitches in the person's speech as different "classes" or categories.
+          </li>
+
+        </o>
+      
+       So, a pitch class profile is like a summary that tells 
+        you how much of each pitch class (high or low) is present in the person's speech. 
+        It's like looking at a graph that shows which pitches are used more or less frequently.
+        <br/><br/>
+        Now, in the context of speech emotion analysis:
+        <br/>
+        1. Emotional Tone: Different emotions can be associated with different pitch patterns. 
+        For example, a higher pitch might be associated with excitement or happiness, while a 
+        lower pitch might be linked to sadness or seriousness.
+        <br/>
+        2. Analysis: By creating a pitch class profile, researchers or algorithms can analyze the speech 
+        and get an idea of the emotional tone. It helps in understanding and categorizing the emotional content of the spoken words.
+        <br/><br/>
+        In essence, pitch class profile is a tool used to break down and summarize the pitch patterns in speech to gain insights into the emotional aspects of communication.
+      </p>
+    </section>
+
+    <section id="dunkle" class="tab-panel">
+      <h4>Linear Predictive Coding </h4>
+      Following are the features extracted from audio files:
+      Link to the code: <a href="">Code</a>
+      <p>
+        <img src= "./assets/img/FeEX/lcp_df.png"
+        Imagine you're trying to understand how someone is feeling based on their voice. The pitch, tone, 
+        and other characteristics of speech can convey a lot about a person's emotions. LPC is a 
+        technique used to analyze and represent the properties of speech signals.
+        <br/>
+        <br/>
+        LPC is applied to speech signals to capture and represent the unique features of the way someone speaks. 
+        By analyzing these features, we can get insights into the emotional content of the speech. 
+        For example, if someone is excited, their speech might have a faster pace and higher pitch, and LPC 
+        helps in capturing and quantifying these characteristics.
+
+         In essence, LPC in speech emotion analysis is like using a tool to break down and understand the 
+         specific elements in a person's speech that reveal their emotions. It's a way of turning the patterns
+          in speech into data that can tell us something about how the person is feeling.
+
+        In speech emotion analysis, the goal is to extract relevant features from speech signals 
+        that can capture emotional content. LPCC coefficients provide a compact representation of the
+         spectral characteristics of speech signals, making them suitable for capturing distinctive features related to emotion.
+        <br/><br/>
+        By analyzing the variations in LPC  across different speech segments or 
+        utterances, researchers and practitioners can develop models to identify and classify 
+        emotional states. These models may use machine learning techniques, such as support
+         vector machines, neural networks, or other classification algorithms.
+        It's important to note that while LPCC can be useful, speech emotion analysis often involves a
+         combination of various features and techniques to achieve better accuracy and robustness. 
+         Other commonly used features in this context include pitch, energy, formants, and prosodic features.
+
+       
+      </p>
+    </section>
+   
+   
+      </div>
+  
+</div>
+
+
+   
+
+  
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

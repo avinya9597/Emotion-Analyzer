@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Services - Moderna Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body style="padding: 10px;">
+
+  <!-- ======= Header ======= -->
+  <header id="header" style="background-color: rgba(42, 44, 57, 0.9);" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html"><img src="./assets/img/favicon.png"/></a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+
+          <li><a class="nav-link scrollto" href="./index.html">Home</a></li>
+          <li><a class="nav-link scrollto active" href="./EDA.html">EDA</a></li>
+          <li class="dropdown"><a href="#"><span>Analysis</span> <i class="bi bi-chevron-down"></i></a>
+
+            <ul>
+              <li><a href="./FeaEx.html">Feature Extraction</a></li>
+              <li><a href="./Model_Analysis.html">Model Analysis</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto " href="./Conclusion.html">Conclusion</a></li>
+         
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+    <!-- ======= Our Services Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container" style="max-width: 1450px;">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Exploratory Data Analysis</h2>
+          <ol>
+            <li><a href="EDA.html">Home</a></li>
+            <li>EDA</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+   <br/>
+
+<div class="tabset" style="width: 100%;">
+  <!-- Tab 1 -->
+  <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+  <label for="tab1">Data Preparation</label>
+  <!-- Tab 2 -->
+  <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+  <label for="tab2">Approach</label>
+  <!-- Tab 3 -->
+  <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
+  <label for="tab3">Audio Data</label>
+   <!-- Tab 4 -->
+   <input type="radio" name="tabset" id="tab4" aria-controls="dunkle">
+   <label for="tab4">Signal Processing</label>
+    <!-- Tab 4 -->
+    <input type="radio" name="tabset" id="tab5" aria-controls="dunkl">
+    <label for="tab5">Emotion Analysis</label>
+  
+  <div class="tab-panels" style="text-align: justify;">
+    <section id="marzen" class="tab-panel">
+      <h4>Data Collection & Preparation</h4>
+      <p>
+        I collected the audio data from IMEOCAP dataset for the project. It can be downloaded from <a href="https://sail.usc.edu/iemocap/" target="_blank">https://sail.usc.edu/iemocap/</a>.
+        This dataset contains IEMOCAP emotion speech database metadata in dataframe, and the path to each .wav file.
+        The Interactive Emotional Dyadic Motion Capture (IEMOCAP) database is an acted, multimodal and multispeaker database, 
+        recently collected at SAIL lab at USC. It contains approximately 12 hours of audiovisual data, including video, speech, 
+        motion capture of face, text transcriptions. It consists of dyadic sessions where actors perform improvisations or scripted 
+        scenarios, specifically selected to elicit emotional expressions. IEMOCAP database is annotated by multiple annotators 
+        into categorical labels, such as anger, happiness, sadness, neutrality, as well as dimensional labels such as valence, 
+        activation and dominance. 
+
+        To perform analysis and build models I have considered only one session conversation.
+        <br/><br/>
+        <b>Following is the snapshot what the data looks like. </b>
+        <br/>
+        <img src='./assets/img/EDA/Data_snapshot.png' style="width: 100%; height: 40%;"/>
+
+
+      </p>
+  </section>
+    <section id="rauchbier" class="tab-panel">
+      <h4></h4>
+      <p>
+        Now in the dataset given, the wav files are in 2 formats.
+        <ol>
+          <li>Dialogue format</li>
+          <li>Sentence format</li>
+        </ol>
+In using the dialogue format the wav file generate a large number of audio vectors and it is not fesiable to use 
+it because of memory constraints. So as mentioned previously I have read only one session of the conversation to run the models
+<br/>
+<hr/>
+        <h3>Methodology</h3>
+        There are multiple approaches to play with the given dataset. The two approaches to this problem:
+        <ol>
+          <li>Audio Model</li>
+          <li>Multimodal Approach</li>
+        </ol>
+
+        In Audio model approach,
+        <br/>
+        The audio data from IEMOCAP dataset is used to extract log spectrogram and 3D spectrogram and also audio vectors (features). 
+        Input data is passed to various models ANN, CNN and LSTM RNN.
+        <br/>
+        In Multimodal approach,<br/>
+        <i>Note: This would be one of the future enhancements that's not been shown here yet</i>
+        Separately trained audio model and separately trained text model is used here to collect the embeddings.
+        The embeddings are concatenated and fed to the classification layer.
+        Only the classification layer is trained.
+
+        However, before I go ahead with the approaches I will briefly introduces few audio related concepts utilizing python libraries in the next tab.
+
+      </p>
+
+
+      </section>
+    <section id="dunkles" class="tab-panel">
+      <h4>Understanding Audio data</h4>
+      <p>
+
+        By nature, a sound wave is a continuous signal, meaning it contains an infinite number of signal values in a given time. 
+        This poses problems for digital devices which expect finite arrays. To be processed, stored, and transmitted by digital devices, 
+        the continuous sound wave needs to be converted into a series of discrete values, known as a digital representation.
+        <br/>
+        The sampling rate (also called sampling frequency) is the number of samples taken in one second and is measured in hertz (Hz).
+        To give you a point of reference, CD-quality audio has a sampling rate of 44,100 Hz, meaning samples are taken 44,100 
+        times per second. 
+
+        Below shows how a simple sine wave is a continuouswave, a complex wave is mix of sine waves of different amplitude, 
+        and audio speech wave looks like
+        <div class="img_container">
+          <div class="image">
+            <img src= './assets/img/EDA/sine.png' style="width: 100%;"/>
+          </div>
+          <div class="image"> 
+            <img src='./assets/img/EDA/complex_wave.png' style="width: 100%; height: 80%;"> 
+        </div> 
+        </div> 
+        <!-- end div for images -->
+
+
+
+      </p>
+    </section>
+
+    <section id="dunkle" class="tab-panel">
+      <h4>Time vs Frequency Domain</h4>
+      <p>
+      Time Domain representations helps in identifying specific fetures like timing of individual sound events, 
+      the overall loudness of the signal, and any irregularities or noise present in the audio.
+      The plot shows the amplitude of the signal on the y-axis and time along the x-axis, where each point 
+      corresponds to a single sample value that was taken when this sound was sampled.
+      <br/>
+      <br/>
+      Frequency Domain representations Another way to visualize audio data is to plot the frequency spectrum of an audio signal, 
+      also known as the frequency domain representation. The spectrum is computed using the discrete Fourier transform or DFT.
+      It describes the individual frequencies that make up the signal and how strong they are.
+      <br/>
+      <br/>
+      <a href="'https://pysdr.org/content/frequency_domain.html" target="_blank">Learn More on FTT</a>
+      <hr/>
+      <div class="img_container">
+        <div class="image">
+          <img src= './assets/img/EDA/sample_audio_wave.png' style="width: 100%;"/>
+        </div>
+        <div class="image"> 
+          <img src='./assets/img/EDA/fft.png' style="width: 100%; height: 100%; padding: 10px;"> 
+      </div> 
+      </div> 
+      <!-- end div for images -->
+      <br/>
+      <div class="img_container">
+        <div class="image">
+          <img src= './assets/img/EDA/normalized_fft.png' style="width: 100%;"/>
+        </div>
+        <div class="image"> 
+          <img src='./assets/img/EDA/spectrum.png' style="width: 100%; height: 100%; padding: 10px;"> 
+      </div> 
+      </div> 
+
+      <hr/>
+      <p>A microphone records small variations in air pressure (represented by changes in voltage) over time. The ear percieves these slight 
+       variations in air pressure as sound. The spectrogram tells us how much different frequencies are present (loudness) in an 
+       audio clip at a moment in time.</p><br/>
+     <img src= './assets/img/EDA/spectrogram.png' style="width: 100%;"/>
+
+      </p>
+
+    
+    </section>
+
+    <section id="dunkl" class="tab-panel">
+      <h2>Emotion Audio Waves</h2>
+      <p>
+        <div class="image">
+          <img src= './assets/img/EDA/emo1.png' style="width: 100%;"/>
+        </div>
+        <h3>Anger Audio wave</h3>
+        <div class="image"> 
+          <img src='./assets/img/EDA/anger.png' style="width: 100%; height: 100%; padding: 10px;"> 
+      </div> 
+
+      <div class="image"> 
+        <h3>Sad Audio wave</h3>
+
+        <img src='./assets/img/EDA/sad.png' style="width: 100%; height: 100%; padding: 10px;"> 
+    </div> 
+
+    <div class="image"> 
+      <h3>Happy Audio wave</h3>
+
+      <img src='./assets/img/EDA/happy.png' style="width: 100%; height: 100%; padding: 10px;"> 
+  </div> 
+       
+      </p>
+      <p>
+       
+        <div class="image"> 
+          <h2>RMS</h2>
+          <hr/>
+          <h3>Anger Audio wave</h3>
+
+          <img src='./assets/img/EDA/angerrms.png' style="width: 100%; height: 100%; padding: 10px;"> 
+      </div> 
+
+      <div class="image"> 
+        <h3>Sad Audio wave</h3>
+
+        <img src='./assets/img/EDA/sadrms.png' style="width: 100%; height: 100%; padding: 10px;"> 
+    </div> 
+
+    <div class="image"> 
+      <h3>Happy Audio wave</h3>
+
+      <img src='./assets/img/EDA/happyrms.png' style="width: 100%; height: 100%; padding: 10px;"> 
+  </div> 
+       
+      </p>
+  </section>
+      </div>
+  
+</div>
+
+
+   
+
+  
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
