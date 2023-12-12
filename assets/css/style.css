@@ -9,15 +9,42 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
-  font-family: "Open Sans", sans-serif;
+body, title {
+  font-family: 'Brush Script MT'
   color: #444444;
+  
 }
 
 a {
   color: #ef6603;
   text-decoration: none;
 }
+
+
+t th, td {
+  border: 2px solid #000;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #000;
+}
+
+th {
+  background-color: #c4c1c1;
+  color: black;
+  border: 2px solid #000;
+  padding: 10px;
+
+}
+
+.best {
+  background-color: #aaffaa;
+}
+
+.bad {
+  background-color: #ee7878;
+}
+
 
 a:hover {
   color: #fc8129;

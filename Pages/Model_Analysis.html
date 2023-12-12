@@ -44,7 +44,7 @@
     <nav id="navbar" class="navbar">
       <ul>
 
-        <li><a class="nav-link scrollto" href="./../index.html">Home</a></li>
+        <li><a class="nav-link scrollto" href="../index.html">Home</a></li>
         <li><a class="nav-link scrollto" href="./EDA.html">EDA</a></li>
         <li class="dropdown active"><a href="#"><span>Analysis</span> <i class="bi bi-chevron-down"></i></a>
 
@@ -126,7 +126,7 @@
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0"  style="text-align: justify;">
           <p>
-          <img src="./assets/img/portfolio/inro.jpg" style="height: 400px;width: 100%;"/>
+          <img src="../assets/img/portfolio/inro.jpg" style="height: 400px;width: 100%;"/>
           </p>
          
         </div>
@@ -198,12 +198,8 @@
         <div class="col-lg-6" style="text-align: justify;">
             <p>
            
-              
-                Based on the results obtained from the different neural network models (ANN, CNN, and LSTM/RNN)
-                using three types of features (MFCC, PCP, and LCP) for speech emotion analysis, we can draw the 
-                following conclusions:
-  
-  
+        
+
                 All three types of neural network models performed relatively well with MFCC features.
                 MFCC features, which capture spectral and temporal characteristics of audio signals, 
                 seem to be effective for speech emotion analysis across all model architectures.
@@ -216,18 +212,85 @@
                 The models struggled to effectively leverage linear predictive coding features, 
                 indicating that these features might not be well-suited for capturing the nuances of speech emotions 
                 in the given dataset.
-  
+
+                <br/>
+<br/>
+                
+            For speech emotion analysis, MFCC features consistently demonstrated the best performance across all three neural network architectures, indicating their effectiveness in capturing relevant patterns for this task.
+            PCP features showed moderate performance, suggesting their potential utility but not reaching the same level of effectiveness as MFCC features.
+            LCP features consistently resulted in lower accuracies, indicating limited suitability for speech emotion analysis in the context of the employed models and dataset.
+            The choice of feature representation is crucial in audio-based tasks, and the success of MFCC features in this study suggests their importance
+             for capturing the discriminative characteristics of speech emotions. 
+               
+    
             </p>
             
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0"  style="text-align: justify;">
           <p>
-            For speech emotion analysis, MFCC features consistently demonstrated the best performance across all three neural network architectures, indicating their effectiveness in capturing relevant patterns for this task.
-            PCP features showed moderate performance, suggesting their potential utility but not reaching the same level of effectiveness as MFCC features.
-            LCP features consistently resulted in lower accuracies, indicating limited suitability for speech emotion analysis in the context of the employed models and dataset.
-            The choice of feature representation is crucial in audio-based tasks, and the success of MFCC features in this study suggests their importance
-             for capturing the discriminative characteristics of speech emotions. Further refinement of feature engineering, model architecture, 
-             and hyperparameter tuning may contribute to improved performance, especially for alternative features such as PCP and LCP.
+
+            <table style="width: 100%;">
+                <tr>
+                    <th>Model</th>
+                    <th>Feature</th>
+                    <th>Training Accuracy</th>
+                    <th>Testing Accuracy</th>
+                </tr>
+                <!-- ANN Model -->
+                <tr>
+                    <td rowspan="3">ANN</td>
+                    <td>MFCC</td>
+                    <td class="best">76.87%</td>
+                    <td class="best">71.38%</td>
+                </tr>
+                <tr>
+                    <td>PCP</td>
+                    <td>59.76%</td>
+                    <td>59.13%</td>
+                </tr>
+                <tr>
+                    <td class="bad">LCP</td>
+                    <td>37.57%</td>
+                    <td>40.25%</td>
+                </tr>
+        
+                <!-- CNN Model -->
+                <tr>
+                    <td rowspan="3">CNN</td>
+                    <td>MFCC</td>
+                    <td class="best">99.83%</td>
+                    <td class="best">73.23%</td>
+                </tr>
+                <tr>
+                    <td>PCP</td>
+                    <td>56.35%</td>
+                    <td>57.12%</td>
+                </tr>
+                <tr>
+                    <td class="bad">LCP</td>
+                    <td>33.54%</td>
+                    <td>32.20%</td>
+                </tr>
+        
+                <!-- LSTM/RNN Model -->
+                <tr>
+                    <td rowspan="3">LSTM/RNN</td>
+                    <td>MFCC</td>
+                    <td>66.58%</td>
+                    <td>63.57%</td>
+                </tr>
+                <tr>
+                    <td>PCP</td>
+                    <td>51.70%</td>
+                    <td>51.55%</td>
+                </tr>
+                <tr>
+                    <td class="bad">LCP</td>
+                    <td>39.39%</td>
+                    <td>43.03%</td>
+                </tr>
+            </table>
+        .
   
             
           </p>
